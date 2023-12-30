@@ -2,8 +2,7 @@
 
 // login   page with email and password
 import { useState } from 'react';
-import { useRouter } from 'next/router';
-import { Axios } from 'axios';
+// import axios from 'axios';
 import Link from 'next/link';
 
 export default function LoginPage() {
@@ -12,8 +11,6 @@ export default function LoginPage() {
         email: '',
         password: ''
     });
-
-
 
     const onLogin = async (e: React.FormEvent<HTMLFormElement>) => {
         // prevent default behavior of form submit
@@ -30,10 +27,8 @@ export default function LoginPage() {
         // }
     }
 
-
     return (
-
-//   login page with email and password
+        //   login page with email and password
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
             <h1>Login</h1>
             <hr />
@@ -46,7 +41,7 @@ export default function LoginPage() {
                     <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                         id="grid-email" type="email" placeholder="demo@gmail.com"
                         onChange={(e) => setUser({ ...user, email: e.target.value })}
-                        />
+                    />
                 </div>
             </div>
             {/* password */}
@@ -56,14 +51,12 @@ export default function LoginPage() {
                         Password
                     </label>
                     <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                        id="grid-password" type="password" placeholder="******************" 
+                        id="grid-password" type="password" placeholder="******************"
                         onChange={(e) => setUser({ ...user, password: e.target.value })}
-                        />
+                    />
                 </div>
             </div>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={
-                (e) => onLogin(e)
-            }>
+            <button type="button" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={(e) => onLogin(e)}>
                 Login
             </button>
             <Link href="/signup">
