@@ -47,7 +47,6 @@ export default function LoginPage() {
                         id="grid-email" type="email" placeholder="demo@gmail.com"
                         onChange={(e) => setUser({ ...user, email: e.target.value })}
                         />
-                    <p className="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
                 </div>
             </div>
             {/* password */}
@@ -60,7 +59,6 @@ export default function LoginPage() {
                         id="grid-password" type="password" placeholder="******************" 
                         onChange={(e) => setUser({ ...user, password: e.target.value })}
                         />
-                    <p className="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
                 </div>
             </div>
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={
