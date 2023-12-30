@@ -12,7 +12,7 @@ export default function LoginPage() {
         password: ''
     });
 
-    const onLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+    const onLogin = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         // prevent default behavior of form submit
         e.preventDefault();
         console.log(user);
@@ -35,7 +35,7 @@ export default function LoginPage() {
             <div className="flex flex-wrap -mx-3 mb-6">
                 {/* email */}
                 <div className="w-full px-3">
-                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
+                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-email">
                         Email
                     </label>
                     <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
