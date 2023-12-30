@@ -40,7 +40,7 @@ export default function LoginPage() {
                     </label>
                     <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                         id="grid-email" type="email" placeholder="demo@gmail.com"
-                        onChange={(e) => setUser({ ...user, email: e.target.value })}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUser({ ...user, email: e.target.value })}
                     />
                 </div>
             </div>
@@ -52,7 +52,7 @@ export default function LoginPage() {
                     </label>
                     <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                         id="grid-password" type="password" placeholder="******************"
-                        onChange={(e) => setUser({ ...user, password: e.target.value })}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUser({ ...user, password: e.target.value })}
                     />
                 </div>
             </div>
